@@ -1,26 +1,19 @@
 package com.commerce.productreviewservices.model;
 
+
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Document(collection = "Rating")
 public class Rating {
-    public String productId;
-    public int rating;
+    @Id
+    public int id;
+    public String rating;
 
-    public Rating(String productId, int rating) {
-        this.productId = productId;
-        this.rating = rating;
-    }
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int quality) {
-        this.rating = rating;
-    }
 }

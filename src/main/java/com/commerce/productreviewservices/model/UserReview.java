@@ -32,8 +32,8 @@ public class UserReview {
     public void initData(String userId) {
         this.setUserId(userId);
         this.setRatings(Arrays.asList(
-                new Rating("101", 5),
-                new Rating("102", 3)
+                new Rating(101, "2.1 not that good"),
+                new Rating(102, "3.5 so so")
         ));
     }
 }
