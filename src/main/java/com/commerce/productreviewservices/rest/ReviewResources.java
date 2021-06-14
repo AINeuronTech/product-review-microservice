@@ -44,15 +44,4 @@ public class ReviewResources {
         return "Review "+id +" is deleted";
     }
 
-    /*@RequestMapping("/product/{productId}")
-    public Rating getProductReviews(@PathVariable("productId")String productId){
-        return new Rating(productId,5);
-    } */
-
-    @RequestMapping("/delete/{userId}")
-    public UserReview getUserReviews(@PathVariable("userId")String userId){
-        UserReview userReview = new UserReview();
-        userReview.initData(userId);
-        return userReview;
-    }
 }
